@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Process">
+   <top>
+      <AnchorPane prefHeight="300.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="144.0" layoutY="24.0" mnemonicParsing="false" onAction="#gButtonPressed" prefHeight="25.0" prefWidth="70.0" text="Green" />
+            <Button layoutX="54.0" layoutY="24.0" mnemonicParsing="false" onAction="#rButtonPressed" prefHeight="25.0" prefWidth="70.0" text="Red" />
+            <Button layoutX="236.0" layoutY="24.0" mnemonicParsing="false" onAction="#bButtonPressed" prefHeight="25.0" prefWidth="70.0" text="Blue" />
+            <Button layoutX="236.0" layoutY="59.0" mnemonicParsing="false" onAction="#CrButtonPressed" prefHeight="25.0" prefWidth="70.0" text="Cr" />
+            <Button layoutX="54.0" layoutY="59.0" mnemonicParsing="false" onAction="#yButtonPressed" prefHeight="25.0" prefWidth="70.0" text="Y" />
+            <Button layoutX="144.0" layoutY="59.0" mnemonicParsing="false" onAction="#CbButtonPressed" prefHeight="25.0" prefWidth="70.0" text="Cb" />
+            <Button layoutX="236.0" layoutY="147.0" mnemonicParsing="false" onAction="#S411ButtonPressed" prefHeight="25.0" prefWidth="70.0" text="4:1:1" />
+            <Button layoutX="54.0" layoutY="147.0" mnemonicParsing="false" onAction="#S422ButtonPressed" prefHeight="25.0" prefWidth="70.0" text="4:2:2" />
+            <Button layoutX="144.0" layoutY="113.0" mnemonicParsing="false" onAction="#S444ButtonPressed" prefHeight="25.0" prefWidth="70.0" text="4:4:4" />
+            <Button layoutX="144.0" layoutY="147.0" mnemonicParsing="false" onAction="#S420ButtonPressed" prefHeight="25.0" prefWidth="70.0" text="4:2:0" />
+            <Button layoutX="350.0" layoutY="24.0" mnemonicParsing="false" onAction="#OverSampleButtonPressed" prefHeight="25.0" prefWidth="90.0" text="OverSample" />
+            <Button layoutX="350.0" layoutY="59.0" mnemonicParsing="false" onAction="#QualityButtonPressed" prefHeight="25.0" prefWidth="90.0" text="Quality" />
+            <Label alignment="CENTER" layoutX="350.0" layoutY="88.0" prefHeight="25.0" prefWidth="90.0" text="MSE" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelMSE" alignment="CENTER" layoutX="368.0" layoutY="113.0" prefHeight="25.0" prefWidth="90.0" textAlignment="CENTER" />
+            <Label alignment="CENTER" layoutX="350.0" layoutY="135.0" prefHeight="25.0" prefWidth="90.0" text="PSNR">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelPSNR" alignment="CENTER" layoutX="368.0" layoutY="159.0" prefHeight="25.0" prefWidth="90.0" />
+            <Button layoutY="113.0" mnemonicParsing="false" onAction="#FullButtonPressed" text="Full" />
+            <Button layoutX="271.0" layoutY="198.0" mnemonicParsing="false" onAction="#TransButtonPressed" prefHeight="25.0" prefWidth="70.0" text="Trans" />
+            <Button layoutX="378.0" layoutY="198.0" mnemonicParsing="false" onAction="#InvTransButtonPressed" prefHeight="25.0" prefWidth="70.0" text="InvTrans" />
+            <RadioButton fx:id="B2x2" layoutX="54.0" layoutY="202.0" mnemonicParsing="false" text="2x2">
+               <toggleGroup>
+                  <ToggleGroup fx:id="a" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="B4x4" layoutX="54.0" layoutY="240.0" mnemonicParsing="false" text="4x4" toggleGroup="$a" />
+            <RadioButton fx:id="B8x8" layoutX="124.0" layoutY="202.0" mnemonicParsing="false" text="8x8" toggleGroup="$a" />
+            <RadioButton fx:id="BDCT" layoutX="200.0" layoutY="202.0" mnemonicParsing="false" text="DCT">
+               <toggleGroup>
+                  <ToggleGroup fx:id="b" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="BWHT" layoutX="198.0" layoutY="240.0" mnemonicParsing="false" text="WHT" toggleGroup="$b" />
+            <Button layoutX="271.0" layoutY="236.0" mnemonicParsing="false" onAction="#KvaButtonPressed" prefHeight="25.0" prefWidth="70.0" text="Kvan" />
+            <Button layoutX="378.0" layoutY="236.0" mnemonicParsing="false" onAction="#InvKvaButtonPressed" prefHeight="25.0" prefWidth="70.0" text="InvKvan" />
+            <Slider fx:id="sliderKva" layoutX="271.0" layoutY="272.0" min="1.0" prefHeight="14.0" prefWidth="180.0" value="50.0" />
+            <Label fx:id="labelKva" layoutX="244.0" layoutY="271.0" prefWidth="20.0" text="50" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
